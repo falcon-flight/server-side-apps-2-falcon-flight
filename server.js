@@ -28,6 +28,9 @@ app.set('view engine', 'html');
 // Now, attach our "controllers" to our "routes".
 app.get('/', indexControllers.index);
 app.get('/attendees', attendeeControllers.listAttendees);
+app.get('/nickname', (req, res) => {
+    res.send('falcon-flight');
+});
 
 // Start up the application and listen on the specified
 // port, or default to port 4000.
