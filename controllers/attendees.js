@@ -5,7 +5,7 @@ const allPeople = require('../models/people.js');
 function listAttendees(request, response) {
     // Store the value of the `q` GET parameter in the
     // `query` variable.
-    const query = request.query.q;
+    let query = request.query.q;
     let peeps = allPeople;
     if (query){
         query = query.ToLowerCase;
